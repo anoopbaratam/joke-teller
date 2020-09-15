@@ -83,7 +83,7 @@ svg {
   font-size: 20px;
   letter-spacing: 0.8rem;
   display: inline-block;
-  width: 70%;
+  max-width: 70%;
   padding: 10px;
   border-bottom: 1.5px white solid;
 }
