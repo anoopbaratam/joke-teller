@@ -71,7 +71,7 @@ svg {
   padding: 30px;
   border-radius: 10px;
   max-width: 80%;
-  margin: 0 auto 50px;
+  margin: 10px auto 50px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   display: none;
 }

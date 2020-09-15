@@ -2,15 +2,40 @@ const jokeButton = document.getElementById("button");
 const jokeCategory = document.getElementById("joke_category");
 const jokeText = document.getElementById("joke_text");
 const jokeContainer = document.getElementById("joke_container");
-const footer = document.getElementById("footer");
 
+const footer = document.getElementById("footer");
 let currDate = new Date();
 let currYear = currDate.getFullYear();
 
 footer.innerHTML = `Coded & Designed by &copy; Anoop ${currYear}<br>The joke content is being retrieved from the <a href="https://sv443.net/jokeapi/v2/">Random Joke API</a>`;
 
+const programmingBox = document.getElementById("programming");
+const miscBox = document.getElementById("miscellaneous");
+const darkBox = document.getElementById("dark");
+const punBox = document.getElementById("pun");
+
+const boxes = [programmingBox, miscBox, darkBox, punBox];
+
 function getTheJoke() {
-  fetch("https://sv443.net/jokeapi/v2/joke/Any")
+  const values = [];
+
+  let initialURL = "https://sv443.net/jokeapi/v2/joke/";
+
+  function updateValues() {
+    for (let box of boxes) {
+      if (box.checked) {
+        values.push(box.value);
+      }
+    }
+  }
+
+  updateValues();
+
+  let stringOfValues = values.join(",");
+
+  var finalURL = `${initialURL}${stringOfValues}`;
+
+  fetch(finalURL)
     .then((res) => res.json())
     .then((res) => {
       if (res.type === "single") {
@@ -27,7 +52,8 @@ function getTheJoke() {
     .catch(() => {
       jokeContainer.style.display = "block";
       jokeCategory.innerText = "Error ⚠";
-      jokeText.innerText = "Problem in Retreiving 🙁 Try again !!";
+      jokeText.innerText =
+        "Problem in Retreiving 🙁 Ckeck atleast one of the boxes and Try again !!";
     });
 }
 
