@@ -1,0 +1,134 @@
+/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  margin: 0;
+  background: #000000;
+  color: white;
+}
+
+.button_container {
+  text-align: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: url("./laugh.gif");
+  background-size: auto 60%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+svg {
+  background-size: 20px auto;
+}
+
+#point,
+#right {
+  height: 100%;
+  width: auto;
+}
+
+#button {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #d24439;
+  color: white;
+  margin: 50px 0;
+  font: large;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+#button:hover {
+  filter: brightness(95%);
+}
+
+#button:active {
+  transform: scale(0.98);
+}
+
+#button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+#joke_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(199, 65, 54, 0.3);
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 0 auto 50px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+#joke_category {
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.8rem;
+  display: inline-block;
+  width: 70%;
+  padding: 10px;
+  border-bottom: 1.5px white solid;
+}
+
+#joke_text {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+footer p {
+  position: absolute;
+  bottom: 10px;
+  font-size: 14px;
+}
+
+/* Adding Media Queries */
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-size: auto 50%;
+  }
+  #button {
+    margin: 20px 0;
+  }
+
+  #joke_container {
+    max-width: 70%;
+    padding: 20px;
+  }
+
+  #joke_category {
+    font-size: 14px;
+    letter-spacing: 0.5rem;
+  }
+
+  #joke_text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 2rem;
+  }
+}
