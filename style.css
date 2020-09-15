@@ -9,10 +9,6 @@ body {
   color: white;
 }
 
-.button_container {
-  text-align: center;
-}
-
 .container {
   min-height: 100vh;
   min-width: 100vw;
@@ -21,16 +17,7 @@ body {
   background-size: auto 60%;
   background-position: center bottom;
   background-repeat: no-repeat;
-}
-
-svg {
-  background-size: 20px auto;
-}
-
-#point,
-#right {
-  height: 100%;
-  width: auto;
+  text-align: center;
 }
 
 #button {
@@ -41,7 +28,7 @@ svg {
   font-family: "Courier New", Courier, monospace;
   background-color: #d24439;
   color: white;
-  margin: 50px 0;
+  margin: 50px 0 20px;
   font: large;
   border: none;
   border-radius: 5px;
@@ -71,7 +58,7 @@ svg {
   padding: 30px;
   border-radius: 10px;
   max-width: 80%;
-  margin: 10px auto 50px;
+  margin: 50px auto;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   display: none;
 }
