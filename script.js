@@ -7,7 +7,7 @@ const footer = document.getElementById("footer");
 let currDate = new Date();
 let currYear = currDate.getFullYear();
 
-footer.innerHTML = `Coded & Designed by &copy; Anoop ${currYear}<br>The joke content is being retrieved from the <a href="https://sv443.net/jokeapi/v2/">Random Joke API</a><br>It is to be that the content being retrieved was entirely out of my control and I request you to ignore anything which you feel was not funny or lame`;
+footer.innerHTML = `Coded & Designed by &copy; Anoop ${currYear}<br>The joke content is being retrieved from the <a href="https://sv443.net/jokeapi/v2/">Random Joke API</a><br>It is to be noted that the content being retrieved was entirely out of my control and I request you to ignore anything which you feel was not funny or lame`;
 
 const programmingBox = document.getElementById("programming");
 const miscBox = document.getElementById("miscellaneous");
